@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malaysia AI Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Game Predictor - Deposit</title>
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <style>
+
     .console-box {
       font-family: monospace;
-      background-color: #000;
+      background-color: #1a1a1a;
       padding: 1rem;
       border-radius: 0.5rem;
-      box-shadow: 0 0 25px #00ff88;
+      box-shadow: 0 0 20px #00ff88;
       color: #00ff88;
       height: 250px;
       overflow-y: auto;
@@ -20,136 +22,229 @@
 
     .loading-screen {
       font-family: monospace;
-      background: black;
+      background: #000;
       color: #00ff88;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       flex-direction: column;
+      z-index: 50;
       position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      z-index: 100;
     }
 
     .hidden-screen {
       display: none;
     }
+
   </style>
+
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white font-sans">
 
-<!-- Loading -->
+
 <div id="loading" class="loading-screen">
-  <p>Connecting to Malaysia Prediction Server...</p>
-  <p class="mt-2">Authenticating user location 🇲🇾</p>
+  <p>Connecting to Malaysia AI server...</p>
 </div>
 
-<!-- Main -->
+
+
 <div id="mainContent" class="hidden-screen">
 
-<header class="bg-black p-4 flex justify-between items-center border-b border-green-500">
 
-  <h1 class="text-xl font-bold text-green-400">
-    Malaysia AI Predictor
-  </h1>
+<header class="w-full bg-gray-800 p-4 flex justify-between items-center">
 
-  <nav class="space-x-4 text-sm">
-    <a href="#how" class="hover:text-green-400">How it works</a>
-    <a href="#games" class="hover:text-green-400">Games</a>
-    <a href="#start" class="hover:text-green-400">Start</a>
-  </nav>
+<h1 class="text-xl font-bold text-green-400">
+Malaysia AI Predictor
+</h1>
+
+<nav class="space-x-4">
+<a href="#how" class="hover:text-green-400">How It Works</a>
+<a href="#games" class="hover:text-green-400">Games</a>
+<a href="#start" class="hover:text-green-400">Get Started</a>
+</nav>
 
 </header>
 
 
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
 
-<h2 class="text-4xl font-bold mb-4">
-Malaysia Players Are Winning Daily 🇲🇾
+<section class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
+
+<h2 class="text-3xl md:text-5xl font-bold mb-6">
+Earn Daily Profits Using AI Signals 🇲🇾
 </h2>
 
-<p class="max-w-xl text-gray-300 mb-6">
-Our AI analyzes Aviator patterns in real time. Thousands of Malaysia users already earn daily using our prediction system.
+<p class="max-w-xl mb-8 text-gray-300">
+Thousands of Malaysia players use our AI predictor to win in Aviator and other games. Real-time signals, pattern analysis, and fast withdrawals.
 </p>
 
-<button id="startButton"
-class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-xl font-bold text-lg">
 
-Access Predictor
+
+<input
+id="userId"
+type="text"
+maxlength="10"
+inputmode="numeric"
+pattern="\d*"
+placeholder="Enter your Malaysia 1xBet Account ID"
+class="bg-gray-700 text-white p-3 rounded-md mb-4"
+/>
+
+
+
+<button
+id="connectButton"
+class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-xl text-lg transition">
+
+Connect Account
 
 </button>
 
 
+
+
+<div id="connectionSuccess"
+class="hidden text-green-400 font-bold mt-6">
+
+<p>
+Account ID:
+<span id="accountIdDisplay">
+1254567890
+</span>
+connected successfully
+</p>
+
+<p>
+Malaysia Server: Active
+</p>
+
+<p>
+Accuracy: 98.4%
+</p>
+
+
+<button
+id="getSignalButton"
+class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition mt-4">
+
+Unlock Signal
+
+</button>
+
+</div>
+
+
+
+
 <div id="errorBox"
-class="hidden bg-black border border-yellow-400 p-6 rounded-xl max-w-md mt-6">
+class="hidden bg-red-600 p-6 rounded-xl max-w-md mx-auto mt-6">
 
-<h3 class="text-xl font-bold mb-2 text-yellow-400">
-Account Not Found
-</h3>
+<h2 class="text-xl font-bold mb-2">
+Deposit Required
+</h2>
 
-<p class="mb-3 text-gray-300">
-Your Malaysia account is not activated yet.
+<p class="mb-4">
+Malaysia account balance not detected.
+Deposit minimum MYR 50 to activate AI signals.
 </p>
 
-<p class="mb-3 text-gray-300">
-Register and deposit to unlock AI predictions.
+<p class="mb-4 text-yellow-300">
+Promo Code: MYA999
 </p>
 
-<p class="text-lg mb-4 text-green-400">
-Promo Code: <strong>MYA999</strong>
-</p>
-
-<a href="https://reffpa.com/L?tag=d_5221661m_23455c_&site=5221661&ad=23455&r=registration"
+<a
+href="https://reffpa.com/L?tag=d_5221661m_23455c_&site=5221661&ad=23455&r=registration"
 target="_blank"
-class="bg-green-500 hover:bg-green-600 text-black font-bold px-4 py-2 rounded">
+id="depositButton"
+class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition">
 
-Register Malaysia Account
+Deposit Now
 
 </a>
 
 </div>
 
+
 </section>
 
 
-<section class="bg-black py-10">
 
-<h3 class="text-center text-2xl text-green-400 font-bold mb-6">
-Latest Malaysia Winners (MYR)
+
+<section class="bg-gray-800 py-12 px-6 text-center">
+
+<h3 class="text-2xl font-bold text-green-400 mb-6">
+Top Malaysia Winners Today (MYR)
 </h3>
 
-<div class="max-w-3xl mx-auto grid grid-cols-2 gap-3 text-green-400 text-sm">
+<div class="grid md:grid-cols-2 gap-4 text-left max-w-4xl mx-auto text-sm text-green-300">
 
-<p>User ID: 884732921 – MYR 4320</p>
-<p>User ID: 118273881 – MYR 5120</p>
-<p>User ID: 773829101 – MYR 3980</p>
-<p>User ID: 992731111 – MYR 6280</p>
-<p>User ID: 661237821 – MYR 4890</p>
-<p>User ID: 812731991 – MYR 5340</p>
-<p>User ID: 921773001 – MYR 4520</p>
-<p>User ID: 781991821 – MYR 6010</p>
+<p>👤 User ID: 882173921 – MYR 4,830</p>
+<p>👤 User ID: 993728112 – MYR 5,220</p>
+<p>👤 User ID: 772819321 – MYR 3,940</p>
+<p>👤 User ID: 118731222 – MYR 6,010</p>
+<p>👤 User ID: 441290888 – MYR 4,720</p>
+<p>👤 User ID: 828372666 – MYR 5,430</p>
+<p>👤 User ID: 775193222 – MYR 4,210</p>
+<p>👤 User ID: 555492999 – MYR 5,870</p>
 
 </div>
 
 </section>
 
 
-<section id="games" class="py-12 bg-gray-900 text-center">
 
-<h3 class="text-2xl text-green-400 font-bold mb-6">
-Supported Game
+
+<section id="games" class="bg-gray-800 py-12 px-6 text-center">
+
+<h3 class="text-2xl font-bold text-green-400 mb-6">
+Compatible Game
 </h3>
 
-<div class="max-w-md mx-auto bg-black p-6 rounded-xl border border-green-500">
+
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+<div class="bg-gray-700 p-6 rounded-xl shadow-lg">
 
 <h4 class="text-xl font-bold mb-2">
-Aviator Predictor
+🎮 Aviator
 </h4>
 
 <p class="text-gray-300">
-Predict safe exit timing before crash using AI analysis.
+AI predicts safe exit timing using Malaysia server pattern analysis.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="how" class="bg-gray-900 py-12 px-6 text-center">
+
+<h3 class="text-2xl font-bold text-green-400 mb-6">
+How It Works
+</h3>
+
+
+<div class="max-w-3xl mx-auto space-y-4 text-gray-300">
+
+<p>
+AI scans Malaysia game servers 24/7
+</p>
+
+<p>
+Detects profitable patterns instantly
+</p>
+
+<p>
+Provides real-time safe signals
 </p>
 
 </div>
@@ -157,49 +252,38 @@ Predict safe exit timing before crash using AI analysis.
 </section>
 
 
-<section id="how" class="py-12 text-center">
 
-<h3 class="text-2xl text-green-400 font-bold mb-6">
-How System Works
+
+<section class="bg-black py-12 px-6 text-center">
+
+<h3 class="text-xl font-bold text-green-400 mb-4">
+[ Malaysia Console ]
 </h3>
 
-<div class="space-y-3 text-gray-300">
 
-<p>AI analyzes Malaysia server data</p>
-<p>Detects profitable patterns</p>
-<p>Generates safe entry timing</p>
-<p>Shows predictions instantly</p>
-
-</div>
-
-</section>
-
-
-<section class="py-12 bg-black text-center">
-
-<h3 class="text-green-400 font-bold mb-4">
-Malaysia Server Console
-</h3>
-
-<div id="console" class="console-box max-w-xl mx-auto text-left">
+<div class="console-box max-w-3xl mx-auto text-left" id="console">
 
 <p>[MY-SERVER] Connected</p>
-<p>[MY-SERVER] Data stream active</p>
-<p>[MY-AI] Pattern engine running</p>
-<p>[MY-AI] Accuracy: 98.2%</p>
+<p>[MY-AI] Predictor engine active</p>
+<p>[MY-AI] Pattern detection running</p>
 
 </div>
 
 </section>
+
+
 
 
 <footer class="text-center text-gray-500 text-sm py-6">
 
-Malaysia AI Predictor System © 2026
+© 2026 Malaysia AI Predictor
 
 </footer>
 
+
+
 </div>
+
 
 
 <script>
@@ -207,19 +291,39 @@ Malaysia AI Predictor System © 2026
 setTimeout(() => {
 
 document.getElementById("loading").classList.add("hidden-screen");
+
 document.getElementById("mainContent").classList.remove("hidden-screen");
 
-}, 2000);
+}, 3000);
 
 
-document.getElementById("startButton").addEventListener("click", () => {
+
+document.getElementById("connectButton").addEventListener("click", () => {
+
+const userId = document.getElementById("userId").value;
+
+if (userId) {
+
+document.getElementById("accountIdDisplay").innerText = userId;
+
+document.getElementById("connectionSuccess").classList.remove("hidden");
+
+document.getElementById("errorBox").classList.add("hidden");
+
+}
+
+});
+
+
+
+document.getElementById("getSignalButton").addEventListener("click", () => {
 
 document.getElementById("errorBox").classList.remove("hidden");
 
 });
 
-
 </script>
+
 
 </body>
 </html>
