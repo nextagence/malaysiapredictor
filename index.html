@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Game Predictor - Deposit</title>
-
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
   <style>
-
     .console-box {
       font-family: monospace;
       background-color: #1a1a1a;
@@ -19,7 +16,6 @@
       height: 250px;
       overflow-y: auto;
     }
-
     .loading-screen {
       font-family: monospace;
       background: #000;
@@ -35,295 +31,113 @@
       left: 0;
       width: 100%;
     }
-
     .hidden-screen {
       display: none;
     }
-
   </style>
-
 </head>
-
 <body class="bg-gray-900 text-white font-sans">
-
-
-<div id="loading" class="loading-screen">
-  <p>Connecting to Malaysia AI server...</p>
-</div>
-
-
-
-<div id="mainContent" class="hidden-screen">
-
-
-<header class="w-full bg-gray-800 p-4 flex justify-between items-center">
-
-<h1 class="text-xl font-bold text-green-400">
-Malaysia AI Predictor
-</h1>
-
-<nav class="space-x-4">
-<a href="#how" class="hover:text-green-400">How It Works</a>
-<a href="#games" class="hover:text-green-400">Games</a>
-<a href="#start" class="hover:text-green-400">Get Started</a>
-</nav>
-
-</header>
-
-
-
-<section class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
-
-<h2 class="text-3xl md:text-5xl font-bold mb-6">
-Earn Daily Profits Using AI Signals 🇲🇾
-</h2>
-
-<p class="max-w-xl mb-8 text-gray-300">
-Thousands of Malaysia players use our AI predictor to win in Aviator and other games. Real-time signals, pattern analysis, and fast withdrawals.
-</p>
-
-
-
-<input
-id="userId"
-type="text"
-maxlength="10"
-inputmode="numeric"
-pattern="\d*"
-placeholder="Enter your Malaysia 1xBet Account ID"
-class="bg-gray-700 text-white p-3 rounded-md mb-4"
-/>
-
-
-
-<button
-id="connectButton"
-class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-xl text-lg transition">
-
-Connect Account
-
-</button>
-
-
-
-
-<div id="connectionSuccess"
-class="hidden text-green-400 font-bold mt-6">
-
-<p>
-Account ID:
-<span id="accountIdDisplay">
-1254567890
-</span>
-connected successfully
-</p>
-
-<p>
-Malaysia Server: Active
-</p>
-
-<p>
-Accuracy: 98.4%
-</p>
-
-
-<button
-id="getSignalButton"
-class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition mt-4">
-
-Unlock Signal
-
-</button>
-
-</div>
-
-
-
-
-<div id="errorBox"
-class="hidden bg-red-600 p-6 rounded-xl max-w-md mx-auto mt-6">
-
-<h2 class="text-xl font-bold mb-2">
-Deposit Required
-</h2>
-
-<p class="mb-4">
-Malaysia account balance not detected.
-Deposit minimum MYR 50 to activate AI signals.
-</p>
-
-<p class="mb-4 text-yellow-300">
-Promo Code: MYA999
-</p>
-
-<a
-href="https://reffpa.com/L?tag=d_5221661m_23455c_&site=5221661&ad=23455&r=registration"
-target="_blank"
-id="depositButton"
-class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition">
-
-Deposit Now
-
-</a>
-
-</div>
-
-
-</section>
-
-
-
-
-<section class="bg-gray-800 py-12 px-6 text-center">
-
-<h3 class="text-2xl font-bold text-green-400 mb-6">
-Top Malaysia Winners Today (MYR)
-</h3>
-
-<div class="grid md:grid-cols-2 gap-4 text-left max-w-4xl mx-auto text-sm text-green-300">
-
-<p>👤 User ID: 882173921 – MYR 4,830</p>
-<p>👤 User ID: 993728112 – MYR 5,220</p>
-<p>👤 User ID: 772819321 – MYR 3,940</p>
-<p>👤 User ID: 118731222 – MYR 6,010</p>
-<p>👤 User ID: 441290888 – MYR 4,720</p>
-<p>👤 User ID: 828372666 – MYR 5,430</p>
-<p>👤 User ID: 775193222 – MYR 4,210</p>
-<p>👤 User ID: 555492999 – MYR 5,870</p>
-
-</div>
-
-</section>
-
-
-
-
-<section id="games" class="bg-gray-800 py-12 px-6 text-center">
-
-<h3 class="text-2xl font-bold text-green-400 mb-6">
-Compatible Game
-</h3>
-
-
-<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-
-<div class="bg-gray-700 p-6 rounded-xl shadow-lg">
-
-<h4 class="text-xl font-bold mb-2">
-🎮 Aviator
-</h4>
-
-<p class="text-gray-300">
-AI predicts safe exit timing using Malaysia server pattern analysis.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section id="how" class="bg-gray-900 py-12 px-6 text-center">
-
-<h3 class="text-2xl font-bold text-green-400 mb-6">
-How It Works
-</h3>
-
-
-<div class="max-w-3xl mx-auto space-y-4 text-gray-300">
-
-<p>
-AI scans Malaysia game servers 24/7
-</p>
-
-<p>
-Detects profitable patterns instantly
-</p>
-
-<p>
-Provides real-time safe signals
-</p>
-
-</div>
-
-</section>
-
-
-
-
-<section class="bg-black py-12 px-6 text-center">
-
-<h3 class="text-xl font-bold text-green-400 mb-4">
-[ Malaysia Console ]
-</h3>
-
-
-<div class="console-box max-w-3xl mx-auto text-left" id="console">
-
-<p>[MY-SERVER] Connected</p>
-<p>[MY-AI] Predictor engine active</p>
-<p>[MY-AI] Pattern detection running</p>
-
-</div>
-
-</section>
-
-
-
-
-<footer class="text-center text-gray-500 text-sm py-6">
-
-© 2026 Malaysia AI Predictor
-
-</footer>
-
-
-
-</div>
-
-
-
-<script>
-
-setTimeout(() => {
-
-document.getElementById("loading").classList.add("hidden-screen");
-
-document.getElementById("mainContent").classList.remove("hidden-screen");
-
-}, 3000);
-
-
-
-document.getElementById("connectButton").addEventListener("click", () => {
-
-const userId = document.getElementById("userId").value;
-
-if (userId) {
-
-document.getElementById("accountIdDisplay").innerText = userId;
-
-document.getElementById("connectionSuccess").classList.remove("hidden");
-
-document.getElementById("errorBox").classList.add("hidden");
-
-}
-
-});
-
-
-
-document.getElementById("getSignalButton").addEventListener("click", () => {
-
-document.getElementById("errorBox").classList.remove("hidden");
-
-});
-
-</script>
-
-
+  <div id="loading" class="loading-screen">
+    <p>Loading... Please wait while we set up your experience.</p>
+  </div>
+
+  <div id="mainContent" class="hidden-screen">
+    <header class="w-full bg-gray-800 p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-green-400">1xBet AI Predictor</h1>
+      <nav class="space-x-4">
+        <a href="#how" class="hover:text-green-400">How It Works</a>
+        <a href="#games" class="hover:text-green-400">Games</a>
+        <a href="#start" class="hover:text-green-400">Get Started</a>
+      </nav>
+    </header>
+
+    <section class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Earn Real Money with AI Predictions</h2>
+      <p class="max-w-xl mb-8 text-gray-300">Thousands of Sri Lankans use our AI to win in games like Aviator, Mines, and Penalty. 98% signal accuracy, real-time predictions, and fast withdrawals.</p>
+
+      <input id="userId" type="text" maxlength="10" inputmode="numeric" pattern="\d*" placeholder="Enter your 1xBet Account ID" class="bg-gray-700 text-white p-3 rounded-md mb-4" />
+      <button id="connectButton" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-xl text-lg transition">Connect Account</button>
+
+      <div id="connectionSuccess" class="hidden text-green-400 font-bold mt-6">
+        <p>Account ID: <span id="accountIdDisplay">1254567890</span> connected successfully!</p>
+        <p>Status: Active | 100% Accuracy | Algorithms Analyzed</p>
+        <button id="getSignalButton" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition mt-4">Get Signal</button>
+      </div>
+
+      <div id="errorBox" class="hidden bg-red-600 p-6 rounded-xl max-w-md mx-auto mt-6">
+        <h2 class="text-xl font-bold mb-2">⚠️ Deposit Not Found</h2>
+        <p class="mb-4">It looks like your balance is empty. Please deposit 50 MYR to unlock signals and start winning.</p>
+        <a href="https://reffpa.com/L?tag=d_5221661m_23455c_&site=5221661&ad=23455&r=registration" target="_blank" id="depositButton" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition">
+          Deposit Now on 1xBet
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-gray-800 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">Top Winners Today (LKR)</h3>
+      <div class="grid md:grid-cols-2 gap-4 text-left max-w-4xl mx-auto text-sm text-green-300">
+        <p>👤 User ID: 1218473422 – MYR 8353</p>
+        <p>👤 User ID: 9912384741 – MYR 8530</p>
+        <p>👤 User ID: 3099234822 – MYR 8847</p>
+        <p>👤 User ID: 1187339121 – MYR 7730</p>
+        <p>👤 User ID: 4412900113 – MYR 8660</p>
+        <p>👤 User ID: 8283721091 – MYR 7900</p>
+        <p>👤 User ID: 7751937742 – MYR 2340</p>
+        <p>👤 User ID: 5554921811 – MYR 9870</p>
+        <p>👤 User ID: 1983238742 – MYR 8050</p>
+        <p>👤 User ID: 3377749301 – MYR 8114</p>
+      </div>
+    </section>
+
+    <section id="games" class="bg-gray-800 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">Compatible Games</h3>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">🎮 Aviator</h4>
+          <p class="text-gray-300">Predict when to cash out before the plane flies away. Our AI detects patterns in real time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="bg-gray-900 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">How It Works</h3>
+      <div class="max-w-3xl mx-auto space-y-4 text-gray-300">
+        <p>📡 Our AI scans live data and historical results 24/7.</p>
+        <p>💡 It identifies patterns that consistently generate profits.</p>
+        <p>📲 You receive real-time predictions directly to your device.</p>
+      </div>
+    </section>
+
+    <section class="bg-black py-12 px-6 text-center">
+      <h3 class="text-xl font-bold text-green-400 mb-4">[ Console Log ]</h3>
+      <div class="console-box max-w-3xl mx-auto text-left" id="console">
+        <p>[INFO] Predictor service active ✅</p>
+      </div>
+    </section>
+
+    <footer class="text-center text-gray-500 text-sm py-6">
+      © 2025 AI Predictor. Not affiliated with 1xBet. Use responsibly.
+    </footer>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loading").classList.add("hidden-screen");
+      document.getElementById("mainContent").classList.remove("hidden-screen");
+    }, 3000);
+
+    document.getElementById("connectButton").addEventListener("click", () => {
+      const userId = document.getElementById("userId").value;
+      if (userId) {
+        document.getElementById("accountIdDisplay").innerText = userId;
+        document.getElementById("connectionSuccess").classList.remove("hidden");
+        document.getElementById("errorBox").classList.add("hidden");
+      }
+    });
+
+    document.getElementById("getSignalButton").addEventListener("click", () => {
+      document.getElementById("errorBox").classList.remove("hidden");
+    });
+  </script>
 </body>
 </html>
